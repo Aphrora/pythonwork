@@ -1,0 +1,14 @@
+学生 = {}
+f = 打开（'C：/Users/user/Desktop/students.csv'，'r'）
+线= f。阅读线（）
+对于 行 中的 行：
+    tmp1 =行。分割（'，'）
+    xuehao  =  tmp1 [ 0 ]
+    兴明 =  tmp1 [ 1 ]
+    学生[学好] = 兴明
+f。关闭（）
+ 随机导入
+num  =  eval（输入（''））
+结果=随机。样本（学生。键（），NUM）
+为 学好 的 结果：
+    打印（学生[ xuehao ]）
