@@ -1,9 +1,9 @@
-文件名=（'C：/Users/TC/Desktop/demo.py'）
-与 开放（文件名，'R' ）作为 FP：
-    行数 =  fp。阅读线（）
-maxLength  =  len（max（lines，key = len））
+filename=('C:/Users/TC/Desktop/demo.py')
+with open(filename,'r') as fp:
+    lines = fp.readlines()
+maxLength = len(max(lines,key=len))
 
-线 = [线。rstrip（）。ljust（maxLength）+ '＃' + str（index）+ ' \ n '
-         对于 索引，行 中的 枚举（行）]
-与 开放（文件名[：- 3 ] + '_new.py' ，'W' ）作为 FP：
-    fp。写行（行）
+lines = [line.rstrip().ljust(maxLength)+'#'+str(index)+'\n'
+         for index, line in enumerate(lines)]
+with open(filename[:-3]+'_new.py','w') as fp:
+    fp.writelines(lines)
