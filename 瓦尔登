@@ -1,12 +1,12 @@
-f =打开（'C：/Users/user/Desktop/Walden.txt'，'r'，编码= 'utf-8'）
-线 =  f。阅读（）
-字 = 线。分割（）
-new_words  = []
-对于 单词 的 词：
-    new_words。追加（字。代替（'' ，'' ）。代替（''。 ，'' ）。代替（'：'，'' ）代替（';' ，'' ）降低（））
-words_set  =  set（new_words）
-words_dict = {}
-对于 字 在 words_set：
-    words_dict [单词] =  new_words。数（字）
-排序（words_dict。项（），键=拉姆达 X：X [ 1 ]，反向=真）
-#print（words_dict.items（））
+f=open('C:/Users/user/Desktop/Walden.txt','r',encoding='utf-8')
+line = f.read()
+words = line.split()
+new_words = []
+for word in words:
+    new_words.append(word.replace(',','').replace('.','').replace(':','').replace(';','').lower())
+words_set = set(new_words)
+words_dict= {}
+for word in words_set:
+    words_dict[word] = new_words.count(word)
+sorted(words_dict.items(),key=lambda x:x[1], reverse=True)
+#print(words_dict.items())
